@@ -1,0 +1,21 @@
+<!DOCTYPE html >
+<html><head><meta charset=utf-8 />
+<title>Return first and last name from a form onSubmit </title>
+</head><body>
+<form id="form1" onsubmit="return formvalue() " name="myForm">
+First name: <input type="text" name="fname" value="David"><br>
+Last name: <input type="text" name="lname" value="Beckham"><br>
+<input type="submit" value="Submit">
+</form>
+
+<div id="awesome"></div>
+<script>
+    function formvalue(){
+        const num1 = document.myForm.fname.value;
+        const num2 = document.myForm.lname.value;
+        document.getElementById('awesome').innerHTML="My name is "+"" + num1 +" "+num2;
+       return false;
+ }
+</script>
+</body>
+</html>
